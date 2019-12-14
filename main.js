@@ -1,27 +1,13 @@
 let body = document.querySelector('body')
 let form = document.querySelector('form')
-debugger;
-let button = form.querySelector('submit')
-console.log(button)
+let input = document.querySelector('input')
 
-function createListItem(){
-    let listItemli = document.createElement('li')
-}
+form.addEventListener('submit', (event)=>{
+    if(event.target.type === 'submit'){
+        event.preventDefault()
+        debugger;
+    } else if (event.target.type === 'text') {
+        console.log('you clicked on the input')
+    }
+})
 
-createListItem()
-// let sayHello = () => {
-//     console.log('Hello!')
-// }
-
-// let title = () => {
-//     let header = document.createElement('div')
-//     header.innerHTML = 
-//     `
-//     <h1>Hello!</h1>
-//     `
-//     header.addEventListener('click', sayHello())
-
-//     return header
-// }
-
-// body.append(title())
